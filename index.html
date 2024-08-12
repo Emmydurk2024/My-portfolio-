@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <!-- Login Form -->
+    <div id="login-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <div id="social-login">
+                <button type="button" id="facebook-login">Login with Facebook</button>
+                <button type="button" id="google-login">Login with Google</button>
+                <button type="button" id="instagram-login">Login with Instagram</button>
+            </div>
+            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+        </form>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-container" style="display:none;">
+        <div id="quiz-header">
+            <h2>Quiz</h2>
+            <div id="timer">5:00</div>
+        </div>
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="options">
+                <button class="option"></button>
+                <button class="option"></button>
+                <button class="option"></button>
+                <button class="option"></button>
+            </div>
+        </div>
+        <button id="submit-btn">Submit</button>
+        <button id="restart-btn" style="display:none;">Restart</button>
+    </div>
+
+    <!-- Calculator and Stopwatch -->
+    <div id="calc-container">
+        <button id="calc-btn">Calculator</button>
+        <div id="calculator-modal" style="display:none;">
+            <h3>Calculator</h3>
+            <input type="text" id="calc-input" placeholder="0" disabled>
+            <div>
+                <button class="calc-btn">1</button>
+                <button class="calc-btn">2</button>
+                <button class="calc-btn">3</button>
+                <button class="calc-btn">+</button>
+                <button class="calc-btn">4</button>
+                <button class="calc-btn">5</button>
+                <button class="calc-btn">6</button>
+                <button class="calc-btn">-</button>
+                <button class="calc-btn">7</button>
+                <button class="calc-btn">8</button>
+                <button class="calc-btn">9</button>
+                <button class="calc-btn">*</button>
+                <button class="calc-btn">0</button>
+                <button class="calc-btn">/</button>
+                <button id="calc-clear">C</button>
+                <button id="calc-equal">=</button>
+                <button class="calc-btn">sin</button>
+                <button class="calc-btn">cos</button>
+                <button class="calc-btn">tan</button>
+                <button class="calc-btn">log</button>
+                <button class="calc-btn">√</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about-us">
+        <h2>About Us</h2>
+        <p>We provide an engaging platform for learning through quizzes. Our goal is to enhance your knowledge while making learning fun.</p>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" style="display:none;">
+        <h2>Dashboard</h2>
+        <p>Work History:</p>
+        <ul id="work-history"></ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
